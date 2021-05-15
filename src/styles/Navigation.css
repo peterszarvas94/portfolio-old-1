@@ -1,0 +1,72 @@
+.nav_list {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    z-index: 1;
+}
+
+.nav_list > li {
+    display: inline-block;
+    margin: 0;
+    padding: 1em .5em 1em 0;
+    list-style: none;
+}
+
+.nav_list > li > button {
+    color: inherit;
+    background-color: transparent;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.nav_active > button {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* for desktop */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* animations */
+.nav_animate {
+    position: relative;
+    left: 0px;
+    opacity: 0;
+    animation-name: nav_animation;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+.nav_animate_1 {
+    animation-delay: 1.2s;
+}
+
+.nav_animate_2 {
+    animation-delay: 1.4s;
+}
+
+.nav_animate_3 {
+    animation-delay: 1.6s;
+}
+
+.nav_animate_4 {
+    animation-delay: 1.8s;
+}
+
+@keyframes nav_animation {
+    from {
+        opacity: 0;
+        left: 1em;
+    }
+
+    to {
+        opacity: 1;
+        left: 0px;
+    }
+}

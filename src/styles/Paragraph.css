@@ -1,0 +1,58 @@
+.home_paragraph {
+    width: 100%;
+    display: block;
+    font-weight: 300;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.home_paragraph > h3 {
+    font-size: 1.17em;
+    width: 70%;
+    padding: 1em 0 0 0;
+    margin: 0 auto;
+}
+
+.home_paragraph > p {
+    font-size: .95em;
+    width: 70%;
+    padding: 1em 0;
+    margin: 0 auto;
+}
+
+.home_paragraph > ul {
+    font-size: 1em;
+    width: 70%;
+    padding: 0 0 .5em 0;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.home_paragraph > ul > li {
+    margin: 0;
+    padding: 0 0 .3em 0;
+}
+
+.few_line {
+    background-color: #d6c1bd;
+    color: black;
+}
+
+.current_tech {
+    background-color: #22223b;
+}
+
+.prevoius_tech {
+    background-color: #2d3047;
+}
+
+/* for desktop */
+@media only screen and (min-width: 768px) {
+    .home_paragraph > h3 {
+        font-size: 1.5em;
+    }
+    .home_paragraph > p {
+        font-size: 1.1em;
+    }
+}
