@@ -1,12 +1,7 @@
-.container {
-    background-color: black;
-    width: 100vw;
-    color: white;
-}
-
 .header_title  {
     width: 100%;
-    height: calc(100vh - 12em);
+    min-height: calc(100vh - 12em);
+    min-height: 461px;
     display: block;
     padding: 12em 0 0 0;
 }
@@ -30,6 +25,7 @@
     .header_title {
         padding: 15em 0 0 0;
         height: calc(100vh - 15em);
+        min-height: 375px;
     }
 
     .header_title > h1 {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/HeaderTitle.css'; 
+import '../styles/HeaderTitle.css';
 
 const HeaderTitle = () => {
 

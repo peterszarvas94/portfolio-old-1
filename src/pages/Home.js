@@ -2,9 +2,11 @@ import React from 'react';
 
 import Navigation from '../components/Navigation';
 import HeaderTitle from '../components/HeaderTitle';
-import Paragraph from '../components/Paragraph';
+import About from '../components/About';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
+
+import '../styles/Home.css';
 
 const Home = () => {
 
@@ -17,10 +19,10 @@ const Home = () => {
 				<Navigation />
 
 				{/* my name and greetings */}
-				<HeaderTitle/>
+				<HeaderTitle />
 
 				{/* paragraphs */}
-				<Paragraph />
+				<About />
 
 				{/* portfolio */}
 				<Portfolio />

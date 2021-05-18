@@ -1,0 +1,85 @@
+.about {
+    min-height: 100vh;
+}
+
+.about_paragraph {
+    width: 70%;
+    display: block;
+    font-weight: 300;
+    display: block;
+    margin: .5em auto;
+    padding: 0;
+}
+
+.about_paragraph > h3 {
+    font-size: 1.17em;
+    width: 90%;
+    padding: 2rem 0 0 0;
+    margin: 0 auto;
+}
+
+.about_paragraph > p {
+    font-size: .95em;
+    width: 90%;
+    padding: 2em 0;
+    margin: 0 auto;
+}
+
+.about_paragraph > ul {
+    font-size: 1em;
+    width: 90%;
+    padding: 0 0 2em 0;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.about_paragraph > ul > li {
+    margin: 0;
+    padding: 0 0 .3em 0;
+}
+
+.few_line {
+    opacity: 0;
+    background-color: #d6c1bd;
+    color: black;
+}
+
+.current_tech {
+    opacity: 0;
+    background-color: #22223b;
+}
+
+.prevoius_tech {
+    opacity: 0;
+    background-color: #2d3047;
+}
+
+/* for desktop */
+@media only screen and (min-width: 768px) {
+    .about_paragraph > h3 {
+        font-size: 1.5em;
+    }
+    .about_paragraph > p {
+        font-size: 1.1em;
+    }
+}
+
+/* animations */
+
+.about_animation {
+    animation-name: paragraph_animation;
+    animation-delay: 0;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes paragraph_animation {
+    from {
+        opacity: 0;
+        transform: scale(.7);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
