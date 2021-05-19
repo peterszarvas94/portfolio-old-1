@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navigation from '../components/Navigation';
 import HeaderTitle from '../components/HeaderTitle';
-import About from '../components/About';
+import About from '../pages/About';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 

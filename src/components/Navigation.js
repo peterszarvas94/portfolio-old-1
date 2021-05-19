@@ -10,7 +10,7 @@ const Navigation = () => {
     // scroll to an element from the menu
     const scrollTo = (id, current) => {
         const nav_height = document.getElementById('nav_list').getBoundingClientRect().height;
-        window.scroll(0, getElementTop(id) - nav_height);
+        window.scroll(0, getElementTop(id) - nav_height +1);
     }
 
     // highlight current button, remove highlight from previous
@@ -21,8 +21,8 @@ const Navigation = () => {
         const element_tops = page_elements.map((el) => getElementTop(el));
 
         for (let i = 0; i < element_tops.length; i++) {
-            const current_top = Math.floor(element_tops[i] - nav_height);
-            const next_top = Math.floor(element_tops[i+1] - nav_height);
+            const current_top = element_tops[i] - nav_height;
+            const next_top = element_tops[i+1] - nav_height;
             
             if (window.pageYOffset >= current_top) {
                 if ((next_top && window.pageYOffset < next_top) || !next_top) {

@@ -3,31 +3,30 @@
 }
 
 .about_paragraph {
-    width: 70%;
+    width: 90%;
     display: block;
     font-weight: 300;
     display: block;
-    margin: .5em auto;
-    padding: 0;
+    margin: 1em auto;
 }
 
 .about_paragraph > h3 {
     font-size: 1.17em;
-    width: 90%;
+    width: 78%;
     padding: 2rem 0 0 0;
     margin: 0 auto;
 }
 
 .about_paragraph > p {
     font-size: .95em;
-    width: 90%;
+    width: 78%;
     padding: 2em 0;
     margin: 0 auto;
 }
 
 .about_paragraph > ul {
     font-size: 1em;
-    width: 90%;
+    width: 78%;
     padding: 0 0 2em 0;
     margin: 0 auto;
     list-style: none;
@@ -67,13 +66,13 @@
 /* animations */
 
 .about_animation {
-    animation-name: paragraph_animation;
+    animation-name: paragraph_animate;
     animation-delay: 0;
     animation-duration: 1s;
     animation-fill-mode:forwards;
 }
 
-@keyframes paragraph_animation {
+@keyframes paragraph_animate {
     from {
         opacity: 0;
         transform: scale(.7);
@@ -82,4 +81,3 @@
         transform: scale(1);
     }
 }
-

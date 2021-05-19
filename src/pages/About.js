@@ -9,12 +9,10 @@ import '../styles/Color.css';
 
 const About = () => {
 
-    const handleScroll = () => {
+    const handleAboutScroll = () => {
         const about_elements = ['few_line', 'current_tech', 'previous_tech'].map((el) => document.getElementById(el));
         const about_element_tops = about_elements.map((el) => el.getBoundingClientRect().top + window.pageYOffset);
-        
-        const nav_elements = document.getElementsByClassName('nav_animate');
-        const nav_height = nav_elements[0].getBoundingClientRect().height;
+        const nav_height = document.getElementById('nav_list').getBoundingClientRect().height;
 
         for (let i = 0; i < about_element_tops.length; i++) {
             if (window.pageYOffset >= about_element_tops[i] - nav_height - window.innerHeight*4/5) {
@@ -23,7 +21,7 @@ const About = () => {
         }        
     }
 
-    document.addEventListener('scroll', handleScroll);
+    document.addEventListener('scroll', handleAboutScroll);
 
     return (
         <div className='about' id='about'>
