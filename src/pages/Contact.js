@@ -46,7 +46,7 @@ const Contact = () => {
                 {/* contact title */}
                 <h3 className='contact_title'>Contact me!</h3>
 
-                <form className='contact_form' onSubmit={submitForm} netlify>
+                <form className='contact_form' onSubmit={submitForm} data-netlify="true">
 
                     {/* sender name */}
                     <div className='contact_name_grid'>
