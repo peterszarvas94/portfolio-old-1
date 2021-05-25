@@ -7,7 +7,7 @@ const Portfolio = () => {
 
     const generateProjects = () => {
         let options = [];
-        for(let i = 0; i < 15; i++) {
+        for(let i = 0; i < 5; i++) {
             options.push(<Project id={i} key={i}/>)
         }
         return options;
@@ -41,7 +41,7 @@ const Portfolio = () => {
     return (
         <>
             <div className='portfolio' id='portfolio'>
-                <h3 className='portfolio_title'>Previous work</h3>
+                <h3 className='portfolio_title'>Previous works</h3>
                 <div className='portfolio_grid'>
                     { generateProjects() }
                 </div>

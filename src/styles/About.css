@@ -10,21 +10,21 @@
     margin: 1em auto;
 }
 
-.about_paragraph > h3 {
+.about_paragraph h3 {
     font-size: 1.17em;
     width: 78%;
     padding: 2rem 0 0 0;
     margin: 0 auto;
 }
 
-.about_paragraph > p {
+.about_paragraph p {
     font-size: .95em;
     width: 78%;
     padding: 2em 0;
     margin: 0 auto;
 }
 
-.about_paragraph > ul {
+.about_paragraph ul {
     font-size: 1em;
     width: 78%;
     padding: 0 0 2em 0;
@@ -32,9 +32,14 @@
     list-style: none;
 }
 
-.about_paragraph > ul > li {
+.about_paragraph li {
     margin: 0;
     padding: 0 0 .3em 0;
+}
+
+.about_paragraph svg {
+    position: relative;
+    top: .15em;
 }
 
 .few_line {

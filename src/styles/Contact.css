@@ -1,3 +1,34 @@
+
+/* TODO: animate contact form */
+/* ! pop-up message after sending */
+
+/* * style menu */
+/* * add SCROLL button to HOME */
+/* * textarea max characters */
+/* * enable email function again */
+/* ? else? */
+
+.contact_textarea,
+.contact_input,
+.contact_button {
+    width: 100%;
+    padding: .5em .5em;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: inherit;
+    resize: none;
+    border-radius: .3em;
+    border: 0;
+    box-shadow: none;
+    background: #d6c1bd;
+}
+
+.contact_input:focus,
+.contact_textarea:focus {
+    outline: none;
+}
+
 .contact {
     min-height: 100vh;
     margin: 0 auto;
@@ -7,4 +38,107 @@
 .contact_title {
     font-size: 1.5em;
     padding: 1em 0 0 0;
+}
+
+.contact_form div {
+    padding: 0 0 .5em 0;
+}
+
+.contact_form label {
+    display: none;
+}
+
+.contact_input {
+    height: 2em;
+}
+
+.contact_form {
+    height: 25em;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 8fr 1fr;
+    grid-template-areas:
+        'name'
+        'email'
+        'subject'
+        'message'
+        'submit';
+}
+
+.contact_name_grid {
+    grid-area: name;
+}
+
+.contact_email_grid {
+    grid-area: email;
+}
+
+.contact_subject_grid {
+    grid-area: subject;
+}
+
+.contact_message_grid {
+    grid-area: message;
+}
+
+.contact_message_grid textarea {
+    height: 100%;
+}
+
+.contact_submit_grid {
+    grid-area: submit
+}
+
+.contact_button {
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #d6c1bd;
+}
+
+.contact_button:hover {
+    color: white;
+    background-color: #2d3047;
+    box-shadow: none;
+}
+
+.contact_button:active {
+    color: white;
+    background-color: #22223b;
+    box-shadow: none;
+}
+
+.contact_button:visited {
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #d6c1bd;
+}
+
+.contact_button_icon svg {
+    position: relative;
+    top: .15em;
+}
+
+/* for desktops */
+@media only screen and (min-width: 640px) {
+    .contact_form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 9fr 1fr;
+        grid-template-areas:
+            'name email'
+            'subject subject'
+            'message message'
+            'submit submit';
+    }
+
+    .contact_name_grid input {
+        width: calc(100% - .5em);
+    }
+
+    .contact_button {
+        width: 10em;
+        float: right;
+    }
 }
