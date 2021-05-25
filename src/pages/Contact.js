@@ -111,6 +111,7 @@ const Contact = () => {
 
                     <div className='contact_submit_grid'>
                         <button
+                            type='submit'
                             onClick={submitForm}
                             className='contact_button'
                             id='contact_submit'
