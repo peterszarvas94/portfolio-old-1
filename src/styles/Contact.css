@@ -8,25 +8,6 @@
 /* * enable email function again */
 /* ? else? */
 
-.contact_textarea,
-.contact_input,
-.contact_button {
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1em;
-    font-family: inherit;
-    resize: none;
-    border-radius: .3em;
-    border: 0;
-    box-shadow: none;
-    background: #d6c1bd;
-}
-
-.contact_input:focus,
-.contact_textarea:focus {
-    outline: none;
-}
-
 .contact {
     min-height: 100vh;
     margin: 0 auto;
@@ -36,10 +17,6 @@
 .contact_title {
     font-size: 1.5em;
     padding: 1em 0 0 0;
-}
-
-.contact_input {
-    height: 2em;
 }
 
 .contact_form {
@@ -56,19 +33,43 @@
         'submit';
 }
 
-.contact_name_grid {
+.contact_textarea,
+.contact_input,
+.contact_button {
+    width: 100%;
+    padding: .5em .5em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: inherit;
+    resize: none;
+    border-radius: .3em;
+    border: 0;
+    box-shadow: none;
+    background: #d6c1bd;
+}
+
+.contact_input {
+    height: 2em;
+}
+
+.contact_input:focus,
+.contact_textarea:focus {
+    outline: none;
+}
+
+.contact_name {
     grid-area: name;
 }
 
-.contact_email_grid {
+.contact_email {
     grid-area: email;
 }
 
-.contact_subject_grid {
+.contact_subject {
     grid-area: subject;
 }
 
-.contact_message_grid {
+.contact_textarea {
     grid-area: message;
     height: 100%;
 }

@@ -46,11 +46,11 @@ const Contact = () => {
                 {/* contact title */}
                 <h3 className='contact_title'>Contact me!</h3>
 
-                <form name='contact_form' method='post' className='contact_form' onSubmit={submitForm} data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact_form" />
+                <form className='contact_form' onSubmit={submitForm}>
+                    
                     {/* sender name */}
                     <input
-                        className='contact_input contact_name_grid'
+                        className='contact_input contact_name'
                         id='contact_name'
                         name='contact_name'
                         type='text'
@@ -62,7 +62,7 @@ const Contact = () => {
                     
                     {/* sender email */}
                     <input
-                        className='contact_input contact_email_grid'
+                        className='contact_input contact_email'
                         id='contact_email'
                         name='contact_email'
                         type='email'
@@ -75,7 +75,7 @@ const Contact = () => {
 
                     {/* message subject */}
                     <input
-                        className='contact_input contact_subject_grid'
+                        className='contact_input contact_subject'
                         id='contact_subject'
                         name='contact_subject'
                         type='text'
@@ -88,7 +88,7 @@ const Contact = () => {
 
                     {/* message text */}
                     <textarea
-                        className='contact_textarea contact_message_grid'
+                        className='contact_textarea'
                         id='contact_message'
                         name='contact_message'
                         value={toSend.contact_message}
@@ -101,9 +101,9 @@ const Contact = () => {
                     {/* submit button */}
                     <button
                         className='contact_button'
+                        id='contact_submit'
                         type='submit'
                         onClick={submitForm}
-                        id='contact_submit'
                     >
                         Send message&nbsp;<span className='contact_button_icon'><FiMail /></span> 
                     </button>
