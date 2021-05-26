@@ -12,8 +12,6 @@
 .contact_input,
 .contact_button {
     width: 100%;
-    padding: .5em .5em;
-    margin: 0;
     box-sizing: border-box;
     font-size: 1em;
     font-family: inherit;
@@ -40,14 +38,6 @@
     padding: 1em 0 0 0;
 }
 
-.contact_form div {
-    padding: 0 0 .5em 0;
-}
-
-.contact_form label {
-    display: none;
-}
-
 .contact_input {
     height: 2em;
 }
@@ -55,7 +45,7 @@
 .contact_form {
     height: 25em;
     display: grid;
-
+    gap: .5em;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 8fr 1fr;
     grid-template-areas:
@@ -80,17 +70,12 @@
 
 .contact_message_grid {
     grid-area: message;
-}
-
-.contact_message_grid textarea {
     height: 100%;
 }
 
-.contact_submit_grid {
-    grid-area: submit
-}
-
 .contact_button {
+    grid-area: submit;
+    float: right;
     cursor: pointer;
     color: white;
     background-color: transparent;
@@ -133,12 +118,8 @@
             'submit submit';
     }
 
-    .contact_name_grid input {
-        width: calc(100% - .5em);
-    }
-
     .contact_button {
+        justify-self: end;
         width: 10em;
-        float: right;
     }
 }

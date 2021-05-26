@@ -49,76 +49,65 @@ const Contact = () => {
                 <form className='contact_form' onSubmit={submitForm} data-netlify="true">
 
                     {/* sender name */}
-                    <div className='contact_name_grid'>
-                        <label htmlFor='contact_name'>Name</label>
-                        <input
-                            className='contact_input'
-                            id='contact_name'
-                            name='contact_name'
-                            type='text'
-                            value={toSend.contact_name}
-                            onChange={handleChange}
-                            placeholder='Name'
-                            required
-                        />
-                    </div>
+                    <input
+                        className='contact_input contact_name_grid'
+                        id='contact_name'
+                        name='contact_name'
+                        type='text'
+                        value={toSend.contact_name}
+                        onChange={handleChange}
+                        placeholder='Name'
+                        required
+                    />
                     
                     {/* sender email */}
-                    <div className='contact_email_grid'>
-                        <label htmlFor='contact_email'>Email</label>
-                        <input
-                            className='contact_input'
-                            id='contact_email'
-                            name='contact_email'
-                            type='email'
-                            value={toSend.contact_email}
-                            onChange={handleChange}
-                            placeholder='Email'
-                            required
-                        />
-                    </div>
+                    <input
+                        className='contact_input contact_email_grid'
+                        id='contact_email'
+                        name='contact_email'
+                        type='email'
+                        value={toSend.contact_email}
+                        onChange={handleChange}
+                        placeholder='Email'
+                        required
+                    />
+                    
 
                     {/* message subject */}
-                    <div className='contact_subject_grid'>
-                        <label htmlFor='contact_subject'>Subject</label>
-                        <input
-                            className='contact_input'
-                            id='contact_subject'
-                            name='contact_subject'
-                            type='text'
-                            value={toSend.contact_subject}
-                            onChange={handleChange}
-                            placeholder='Subject'
-                            required
-                        />
-                    </div>
+                    <input
+                        className='contact_input contact_subject_grid'
+                        id='contact_subject'
+                        name='contact_subject'
+                        type='text'
+                        value={toSend.contact_subject}
+                        onChange={handleChange}
+                        placeholder='Subject'
+                        required
+                    />
+                    
 
                     {/* message text */}
-                    <div className='contact_message_grid'>
-                        <label htmlFor='contact_message'>Message</label>
-                        <textarea
-                            className='contact_textarea'
-                            id='contact_message'
-                            name='contact_message'
-                            value={toSend.contact_message}
-                            onChange={handleChange}
-                            placeholder='Message'
-                            required
-                        />
-                    </div>
+                    <textarea
+                        className='contact_textarea contact_message_grid'
+                        id='contact_message'
+                        name='contact_message'
+                        value={toSend.contact_message}
+                        onChange={handleChange}
+                        placeholder='Message'
+                        required
+                    />
+                    
 
                     {/* submit button */}
-
-                    <div className='contact_submit_grid'>
-                        <button
-                            type='submit'
-                            onClick={submitForm}
-                            className='contact_button'
-                            id='contact_submit'
-                        >
-                            Send message&nbsp;<span className='contact_button_icon'><FiMail /></span> 
-                        </button>
-                    </div>
+                    <button
+                        className='contact_button'
+                        type='submit'
+                        onClick={submitForm}
+                        id='contact_submit'
+                    >
+                        Send message&nbsp;<span className='contact_button_icon'><FiMail /></span> 
+                    </button>
+                    
 
                 </form>
             </div>
