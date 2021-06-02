@@ -121,7 +121,7 @@ const Contact = () => {
                                 <span>
                                     <strong>Linkedin:</strong>
                                     <div>
-                                        <a href='https://www.linkedin.com/in/peterszarvas94' target='_blank'>
+                                        <a href='https://www.linkedin.com/in/peterszarvas94' target='_blank' rel="noopener noreferrer">
                                             linkedin.com/in/peterszarvas94
                                         </a>
                                     </div>
