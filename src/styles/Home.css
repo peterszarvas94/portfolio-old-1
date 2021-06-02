@@ -1,7 +1,8 @@
 .container {
     position: relative;
-    background-color: black;
+    background-color: #1e1e24;
     width: 100vw;
+    max-width: 2000px;
+    margin: 0 auto;
     color: white;
-    overflow-y: scroll;
 }

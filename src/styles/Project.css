@@ -20,18 +20,14 @@
 /* animations */
 
 .project_container:hover {
-    animation-name: hover_animate;
-    animation-delay: 0s;
-    animation-duration: .2s;
-    animation-fill-mode: forwards;
     cursor: pointer;
+    transform: scale(1.05);
+    transition: .2s;
 }
 
 .project_container {
-    animation-name: unhover_animate;
-    animation-delay: 0s;
-    animation-duration: .2s;
-    animation-fill-mode: forwards;
+    transform: scale(1);
+    transition: .2s;
 }
 
 .project_element {
@@ -51,22 +47,6 @@
         transform: scale(.5);
     } to {
         opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes hover_animate {
-    from {
-        transform: scale(1);
-    } to {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes unhover_animate {
-    from {
-        transform: scale(1.05);
-    } to {
         transform: scale(1);
     }
 }

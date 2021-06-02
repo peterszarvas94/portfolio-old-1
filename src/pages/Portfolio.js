@@ -7,7 +7,7 @@ const Portfolio = () => {
 
     const generateProjects = () => {
         let options = [];
-        for(let i = 0; i < 5; i++) {
+        for(let i = 0; i < 4; i++) {
             options.push(<Project id={i} key={i}/>)
         }
         return options;

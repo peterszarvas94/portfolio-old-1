@@ -1,7 +1,9 @@
 .nav_list {
     position: fixed;
     width: 100%;
-    background-color: black;
+    max-width: 2000px;
+    margin: 0 auto;
+    background-color: #1e1e24;
     margin: 0;
     padding: 0;
     text-align: right;
