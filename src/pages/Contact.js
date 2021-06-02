@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 // import emailjs, { init } from 'emailjs-com';
-import { FiMail } from 'react-icons/fi';
+import { FiMail, FiPhone } from 'react-icons/fi';
+import { FaPaperPlane, FaLinkedin } from 'react-icons/fa';
 
 import '../styles/Contact.css';
-
 
 // init("user_MWRHD7DbwWh1M82xabdWy");
 
@@ -46,6 +46,8 @@ const Contact = () => {
                 {/* contact title */}
                 <h3 className='contact_title'>Contact me!</h3>
 
+                
+                {/* the form */}
                 <form className='contact_form' onSubmit={submitForm}>
                     
                     {/* sender name */}
@@ -105,11 +107,45 @@ const Contact = () => {
                         type='submit'
                         onClick={submitForm}
                     >
-                        Send message&nbsp;<span className='contact_button_icon'><FiMail /></span> 
+                        Send message&nbsp;<span className='contact_button_icon'><FaPaperPlane /></span> 
                     </button>
                     
+                    {/* details */}
+                    <div className='contact_details'>
+                        <h3>Get in touch!</h3>
+                        <ul>
+                            <li>
+                                <span>
+                                    <FaLinkedin />
+                                </span>
+                                <span>
+                                    <strong>Linkedin:</strong>
+                                    <div>linkedin.com/in/peterszarvas94</div>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <FiMail />
+                                </span>
+                                <span>
+                                    <strong>Email:</strong>
+                                    <div>peterszarvas94@gmail.com</div>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <FiPhone />
+                                </span>
+                                <span>
+                                    <strong>Phone:</strong>
+                                    <div>+36&nbsp;20&nbsp;2746444</div>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
 
                 </form>
+                
             </div>
         </>
     )

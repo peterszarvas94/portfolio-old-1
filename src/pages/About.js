@@ -17,6 +17,9 @@ const About = () => {
         for (let i = 0; i < about_element_tops.length; i++) {
             if (window.pageYOffset >= about_element_tops[i] - nav_height - window.innerHeight*4/5) {
                 about_elements[i].classList.add('about_animation');
+                if (i === 2 && about_elements[i].classList.contains('about_animation')) {
+                    document.removeEventListener('scroll', handleAboutScroll);
+                }
             }
         }        
     }
