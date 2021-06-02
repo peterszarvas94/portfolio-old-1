@@ -120,7 +120,11 @@ const Contact = () => {
                                 </span>
                                 <span>
                                     <strong>Linkedin:</strong>
-                                    <div>linkedin.com/in/peterszarvas94</div>
+                                    <div>
+                                        <a href='https://www.linkedin.com/in/peterszarvas94' target='_blank'>
+                                            linkedin.com/in/peterszarvas94
+                                        </a>
+                                    </div>
                                 </span>
                             </li>
                             <li>
@@ -129,7 +133,11 @@ const Contact = () => {
                                 </span>
                                 <span>
                                     <strong>Email:</strong>
-                                    <div>peterszarvas94@gmail.com</div>
+                                    <div>
+                                        <a href='mailto:peterszarvas94@gmail.com'>
+                                            peterszarvas94@gmail.com
+                                        </a>
+                                    </div>
                                 </span>
                             </li>
                             <li>
@@ -138,7 +146,11 @@ const Contact = () => {
                                 </span>
                                 <span>
                                     <strong>Phone:</strong>
-                                    <div>+36&nbsp;20&nbsp;2746444</div>
+                                    <div>
+                                        <a href='tel:+36202746444'>
+                                            +36&nbsp;20&nbsp;2746444
+                                        </a>
+                                    </div>
                                 </span>
                             </li>
                         </ul>

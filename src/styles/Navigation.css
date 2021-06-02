@@ -10,14 +10,14 @@
     z-index: 1;
 }
 
-.nav_list > li {
+.nav_list li {
     display: inline-block;
     margin: 0;
     padding: 1em .5em 1em 0;
     list-style: none;
 }
 
-.nav_list > li > button {
+.nav_list button {
     color: inherit;
     background-color: transparent;
     font-size: inherit;
@@ -25,7 +25,11 @@
     cursor: pointer;
 }
 
-.nav_active > button {
+.nav_list button:hover {
+    text-decoration: underline;
+}
+
+.nav_active button {
     font-weight: 500;
     text-decoration: underline;
 }
