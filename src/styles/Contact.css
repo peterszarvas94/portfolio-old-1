@@ -40,6 +40,7 @@
 .contact_textarea,
 .contact_input,
 .contact_button {
+    width: 100%;
     padding: .5em .5em;
     box-sizing: border-box;
     font-size: 1em;

@@ -26,7 +26,7 @@
 }
 
 .nav_list button:hover {
-    text-decoration: underline;
+    text-decoration: underline;         
 }
 
 .nav_active button {
