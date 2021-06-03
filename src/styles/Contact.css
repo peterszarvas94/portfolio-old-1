@@ -181,3 +181,51 @@
             'submit submit';
     }
 }
+
+/* animations */
+
+.contact_form input,
+.contact_form textarea,
+.contact_form button {
+    opacity: 0;
+    position: relative;
+    right: 2em;
+}
+
+.contact_details {
+    opacity: 0;
+    position: relative;
+    left: 2em;
+}
+
+.contact_animation {
+    animation-name:contact_animate;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.details_animation {
+    animation-name:details_animate;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes contact_animate {
+    from {
+        opacity: 0;
+        right: 2em;
+    } to {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes details_animate {
+    from {
+        opacity: 0;
+        left: 2em;
+    } to {
+        opacity: 1;
+        left: 0;
+    }
+}
