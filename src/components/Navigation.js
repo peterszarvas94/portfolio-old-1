@@ -8,7 +8,12 @@ const Navigation = () => {
     const getElementTop = (id) => document.getElementById(id).getBoundingClientRect().top + window.pageYOffset;
 
     // scroll to an element from the menu
-    const scrollTo = (id, current) => {
+    const scrollTo = (id) => {
+        if (id === 0) {
+            window.scroll(0, 0);
+            return;
+        }
+
         const nav_height = document.getElementById('nav_list').getBoundingClientRect().height;
         window.scroll(0, getElementTop(id) - nav_height +1);
     }
@@ -40,36 +45,39 @@ const Navigation = () => {
 
     return (
         <>
-            <ul className='nav_list' id='nav_list'>
-                <li className='nav_animate nav_animate_1 nav_active' onClick={
-                    () => { scrollTo('header_title', 'nav_animate_1') }
-                }>
-                    <button>
-                        home
-                    </button>
-                </li>
-                <li className='nav_animate nav_animate_2' onClick={
-                    () => { scrollTo('about', 'nav_animate_2') }
-                }>
-                    <button>
-                        about
-                    </button>
-                </li>
-                <li className='nav_animate nav_animate_3' onClick={
-                    () => { scrollTo('portfolio', 'nav_animate_3') }
+            <div className='nav_before' id='nav_before' />
+            <div class='nav_container'>
+                <ul className='nav_list' id='nav_list'>
+                    <li className='nav_animate nav_animate_1 nav_active' onClick={
+                        () => { scrollTo(0) }
                     }>
-                    <button>
-                        portfolio
-                    </button>
-                </li>
-                <li className='nav_animate nav_animate_4' onClick={
-                    () => { scrollTo('contact', 'nav_animate_4') }
-                }>
-                    <button>
-                        contact
-                    </button>
-                </li>
-            </ul>
+                        <button>
+                            HOME
+                        </button>
+                    </li>
+                    <li className='nav_animate nav_animate_2' onClick={
+                        () => { scrollTo('about') }
+                    }>
+                        <button>
+                            ABOUT
+                        </button>
+                    </li>
+                    <li className='nav_animate nav_animate_3' onClick={
+                        () => { scrollTo('portfolio') }
+                        }>
+                        <button>
+                            PORTFOLIO
+                        </button>
+                    </li>
+                    <li className='nav_animate nav_animate_4' onClick={
+                        () => { scrollTo('contact') }
+                    }>
+                        <button>
+                            CONTACT
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </>
     )
 }

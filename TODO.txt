@@ -1,0 +1,6 @@
+pop-up message after sending
+
+add SCROLL DOWN button adter TITLE
+textarea max characters
+
+/else?

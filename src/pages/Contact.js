@@ -42,7 +42,7 @@ const Contact = () => {
             if(!fields[i].value) {
                 let name = fields[i].name.split('_')[1];
                 fields[i].placeholder = 'Enter your ' + name + ' there';
-                fields[i].style.boxShadow = 'inset 0 0 2px 2px red';
+                fields[i].style.boxShadow = 'inset 0 0 1px 1px red';
                 error = true;
             }
 
@@ -51,7 +51,7 @@ const Contact = () => {
                 if(!re.test(fields[i].value)) {
                     fields[i].value = '';
                     fields[i].placeholder = 'Enter a valid email address';
-                    fields[i].style.boxShadow = 'inset 0 0 2px 2px red';
+                    fields[i].style.boxShadow = 'inset 0 0 1px 1px red';
                     error = true;
                 }
             }
@@ -201,7 +201,7 @@ const Contact = () => {
                                 <span>
                                     <strong>Email:</strong>
                                     <div>
-                                        <a href='mailto:peterszarvas94@gmail.com'>
+                                        <a href='mailto:peterszarvas94@gmail.com' target='_blank' rel="noopener noreferrer">
                                             peterszarvas94@gmail.com
                                         </a>
                                     </div>
@@ -215,7 +215,7 @@ const Contact = () => {
                                 <span>
                                     <strong>Phone:</strong>
                                     <div>
-                                        <a href='tel:+36202746444'>
+                                        <a href='tel:+36202746444' target='_blank' rel="noopener noreferrer">
                                             +36&nbsp;20&nbsp;2746444
                                         </a>
                                     </div>

@@ -1,5 +1,6 @@
 .about {
     min-height: 100vh;
+    padding: 0;
 }
 
 .about_paragraph {
@@ -22,6 +23,7 @@
     width: 78%;
     padding: 2em 0;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .about_paragraph ul {

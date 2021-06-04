@@ -23,8 +23,8 @@
 /* for desktop */
 @media only screen and (min-width: 768px) {
     .header_title {
-        padding: 15em 0 0 0;
-        height: calc(100vh - 15em);
+        padding: 10em 0 0 0;
+        height: calc(100vh - 10em);
         min-height: 375px;
     }
 

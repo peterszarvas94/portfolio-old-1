@@ -34,8 +34,8 @@ const About = () => {
                 <h3>Nice to meet you!</h3>
                 <p id='this'>
                     I'm a self-taught coder, learning new technologies and creating exciting projects every day.
-                    I have always had an interest in programming and tech, and I'm currently working as a Windows system administrator.<br/>
-                    I'm dedicated to coding since approx. two years, and I'm trying to become an offical developer.
+                    I have always had an interest in programming and tech, and I'm currently working as a Windows system administrator.
+                    I'm dedicated to coding since approx. a year, and I'm trying to become an offical developer.
                 </p>
             </div>
 
