@@ -1,6 +1,6 @@
 .portfolio {
-    min-height: 100vh;
-    margin: 0 auto;
+    min-height: calc(100vh - 5em);
+    margin: 0 auto 5em auto;
     width: 70%;
 }
 

@@ -1,30 +1,115 @@
 .nav_before {
     display: block;
+    /* display: none; */
     width: 100%;
     height: 2em;
 }
 
 .nav_container {
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
     width: inherit;
-    background-color: #1e1e24;
+    height: 2em;
+    /* background-color: #1e1e24; */
     z-index: 1;
 }
 
+.nav_sandwich {
+    width: 2em;
+    height: 2em;
+    display: block;
+    margin: 0 0 0 auto;
+    padding: .5em;
+    opacity: 0;
+    cursor: pointer;
+
+    animation-name: animate-sandwich;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate-sandwich {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .8;
+    }
+}
+
+.nav_sandwich_button {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: white;
+    color: #22223b;
+    border-radius: 1em;
+    font-size: 1.3em;
+}
+
+.nav_sandwich_button svg {
+    position: relative;
+    left: .28em;
+    top: .25em;
+}
+
 .nav_list {
-    width: 70%;
-    max-width: 2000px;
-    margin: 0 auto;
+    position: fixed;
+    /* z-index: 1; */
+    display: none;
+
+    /* margin: 0 auto; */
+    margin: 0;
     padding: 0;
-    text-align: right;
+    /* text-align: right; */
+    color: black;
+    background-color: white;
+
+    /* width: 70%; */
+    /* max-width: 2000px; */
+
+    width: 100%;
+    max-width: 15em;
+    height: 100%;
+
+    top: 0;
+    right: 0;
+
+    clip-path: circle(0 at calc(100% - 1.5em) 1.5em);
+
+    
+}
+
+.nav_list_animate_in {
+    animation-name: animaite-menu-in;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.nav_list_animate_out {
+    animation-name: animaite-menu-out;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animaite-menu-in {
+    from { clip-path: circle(0 at calc(100% - 1.5em) 1.5em); }
+    to { clip-path: circle(150% at calc(100% - 1.5em) 1.5em); }
+}
+
+@keyframes animaite-menu-out {
+    from { clip-path: circle(150% at calc(100% - 1.5em) 1.51em); }
+    to { clip-path: circle(0 at calc(100% - 1.5em) 1.5em); }
 }
 
 .nav_list li {
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0;
     padding: .5em .5em;
-    margin: .3em .15em;
+    margin: .3em .15em .3em auto;
+    width: fit-content;
     list-style: none;
     border-radius: .3em;
     transition: .3s;
@@ -51,12 +136,10 @@
 }
 
 /* for desktop */
-@media only screen and (min-width: 768px) {
-    
-}
+@media only screen and (min-width: 768px) {}
 
 /* animations */
-.nav_animate {
+/* .nav_animate {
     position: relative;
     left: 0px;
     opacity: 0;
@@ -91,4 +174,4 @@
         opacity: 1;
         left: 0px;
     }
-}
+} */

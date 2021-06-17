@@ -1,9 +1,9 @@
 .header_title  {
     width: 100%;
-    height: calc(100vh - 12em);
+    height: calc(100vh - 7em);
     min-height: 461px;
     display: block;
-    padding: 12em 0 0 0;
+    padding: 7em 0 0 0;
 }
 
 .header_title > h1 {

@@ -1,6 +1,7 @@
 .about {
-    min-height: 100vh;
+    min-height: calc(100vh - 5em);
     padding: 0;
+    margin: 0 0 5em 0;
 }
 
 .about_paragraph {
