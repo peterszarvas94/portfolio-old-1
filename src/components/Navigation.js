@@ -8,21 +8,57 @@ const Navigation = () => {
     // state for the menu opening
     const [opened, setOpened] = useState(false);
     const [loaded, setLoaded] = useState(false);
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+    });
 
     // updating the menu
     useEffect(() => {
+
         const list = document.getElementById('nav_list');
         list.classList.remove('nav_list_animate_in', 'nav_list_animate_out');
-        list.classList.add((opened) ? 'nav_list_animate_in' : 'nav_list_animate_out');
+
+        if (windowSize.width <= 768) {
+            list.classList.add((opened) ? 'nav_list_animate_in' : 'nav_list_animate_out');
+        }
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [opened]);
 
     //check if clicked and not auto-run
     useEffect(() => {
-        const list = document.getElementById('nav_list');
-        if (loaded) list.style.display = 'block';
+        if (loaded) {
+            document.getElementById('nav_list').style.display = 'block';
+            document.getElementById('nav_sandwich').style.animation ='none';
+            document.getElementById('nav_sandwich').style.opacity = '.8';
+        }
     }, [loaded]);
 
-    document.addEventListener('scroll', console.log('hey'))
+    useEffect(() => {
+        function handleResize() {
+            
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('orientationchange', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('orientationchange', handleResize);
+        };
+    }, []);
+    
+    useEffect(() => {
+        document.getElementById('nav_list').classList.remove('nav_list_animate_in', 'nav_list_animate_out');
+        setOpened(false);
+        if (windowSize.width >= 768) {
+            document.getElementById('nav_sandwich').style.animation ='none';
+            document.getElementById('nav_sandwich').style.opacity = '.8';
+        }
+    }, [windowSize]);
 
     // handling sandwich menu click
     const toggleMenu = () => {
@@ -40,11 +76,8 @@ const Navigation = () => {
             toggleMenu();
             return;
         }
-
-
         const nav_height = document.getElementById('nav_container').getBoundingClientRect().height;
         window.scroll(0, getElementTop(id) - nav_height +1);
-
         toggleMenu();
     }
 
@@ -66,7 +99,7 @@ const Navigation = () => {
                         if (el.classList.contains('nav_active')) {
                             el.classList.remove('nav_active');
                         }
-                        nav_elements[i].classList.add('nav_active')                        
+                        nav_elements[i].classList.add('nav_active');                     
                     }
                 }
             }
@@ -77,14 +110,16 @@ const Navigation = () => {
         <>
             <div className='nav_before' id='nav_before' />
             <div className='nav_container' id='nav_container'>
-                <div className='nav_sandwich'>
-                    <div className="nav_sandwich_button" onClick={toggleMenu}>
+                <div className='nav_sandwich nav_sandwich_animation' id='nav_sandwich'>
+                    <button className="nav_sandwich_button" onClick={toggleMenu}>
                         <HiMenu/>
-                    </div>
+                    </button>
                 </div>
                 <ul className='nav_list' id='nav_list'>
                     <li className='nav_close' onClick={toggleMenu}>
-                        <HiX />
+                        <button className='nav_close_button'>
+                            <HiX />
+                        </button>
                     </li>
                     <li className='nav_animate nav_animate_1 nav_active' onClick={
                         () => { scrollTo(0) }

@@ -23,7 +23,9 @@
     padding: .5em;
     opacity: 0;
     cursor: pointer;
+}
 
+.nav_sandwich_animation {
     animation-name: animate-sandwich;
     animation-duration: 1s;
     animation-delay: 1.5s;
@@ -47,12 +49,20 @@
     color: #22223b;
     border-radius: 1em;
     font-size: 1.3em;
+    border: none;
+}
+
+.nav_sandwich_button:hover {
+    cursor: pointer;
+    background-color: #444140;
+    color: white;
+    /* border: 1px solid #444140; */
 }
 
 .nav_sandwich_button svg {
     position: relative;
-    left: .28em;
-    top: .25em;
+    left: 0;
+    top: .1em;
 }
 
 .nav_list {
@@ -71,13 +81,13 @@
     /* max-width: 2000px; */
 
     width: 100%;
-    max-width: 15em;
+    /* max-width: 15em; */
     height: 100%;
 
     top: 0;
     right: 0;
 
-    clip-path: circle(0 at calc(100% - 1.5em) 1.5em);
+    clip-path: circle(0 at calc(100% - 1.45em) 1.5em);
 
     
 }
@@ -95,34 +105,83 @@
 }
 
 @keyframes animaite-menu-in {
-    from { clip-path: circle(0 at calc(100% - 1.5em) 1.5em); }
-    to { clip-path: circle(150% at calc(100% - 1.5em) 1.5em); }
+    from { clip-path: circle(0 at calc(100% - 1.45em) 1.5em); }
+    to { clip-path: circle(150% at calc(100% - 1.45em) 1.5em); }
 }
 
 @keyframes animaite-menu-out {
-    from { clip-path: circle(150% at calc(100% - 1.5em) 1.51em); }
-    to { clip-path: circle(0 at calc(100% - 1.5em) 1.5em); }
+    from { clip-path: circle(150% at calc(100% - 1.45em) 1.51em); }
+    to { clip-path: circle(0 at calc(100% - 1.45em) 1.5em); }
+}
+
+.nav_close {
+    width: 2em;
+    height: 2em;
+    display: block;
+    margin: 0 0 0 auto;
+    padding: .5em;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.nav_close_button {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+    border: 1px solid #444140;
+
+    background-color: #444140;
+    color: white;
+
+    border-radius: 1em;
+    font-size: 1.3em;
+    transition: .3s;
+}
+
+.nav_close_button:hover,
+.nav_close_button:active
+.nav_close_button:focus  {
+    cursor: pointer;
+    
+    background-color: white;
+    color: black;;
+
+    transition: .3s;
+}
+
+.nav_close svg {
+    /* background-color: chartreuse; */
+    position: relative;
+    left: 0;
+    top: .1em;
 }
 
 .nav_list li {
     /* display: inline-block; */
-    margin: 0;
-    padding: .5em .5em;
-    margin: .3em .15em .3em auto;
-    width: fit-content;
     list-style: none;
-    border-radius: .3em;
     transition: .3s;
 }
 
+.nav_list li:not(.nav_close) {
+    width: fit-content;
+    border-radius: .3em;
+    padding: .5em .5em;
+    margin: .3em .15em .3em auto;
+}
+
 .nav_list li:hover {
-    background-color: #444140;
-    color: white;
+    
     transition: .3s;
     cursor: pointer;
 }
 
-.nav_list button {
+.nav_list li:not(.nav_close):hover {
+    background-color: #444140;
+    color: white;
+}
+
+.nav_list button:not(.nav_close_button) {
     color: inherit;
     background-color: transparent;
     font-size: inherit;
@@ -136,7 +195,42 @@
 }
 
 /* for desktop */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    .nav_container {
+        position: sticky;
+        top: 0px;
+        height: fit-content;
+        background-color: #1e1e24;
+    }
+
+    .nav_sandwich {
+        display: none;
+    }
+
+    .nav_list {
+        display: block;
+        position: relative;
+        clip-path: none;
+        animation-fill-mode: none;
+        background-color: unset;
+        color: white;
+        width: 90%;
+        height: unset;
+        max-width: 2000px;
+        margin: 0 auto;
+        text-align: right;
+    }
+
+    .nav_close {
+        display: none;
+    }
+
+    .nav_list li:not(.nav_close){
+        display: inline-block;
+        margin: .3em .15em;
+    }
+}
 
 /* animations */
 /* .nav_animate {
