@@ -34,6 +34,7 @@ const Navigation = () => {
         }
     }, [loaded]);
 
+    //watch for resize-orientationchange, and set the width-height
     useEffect(() => {
         function handleResize() {
             
@@ -51,6 +52,7 @@ const Navigation = () => {
         };
     }, []);
     
+    //show wandwich menu on desktop size
     useEffect(() => {
         document.getElementById('nav_list').classList.remove('nav_list_animate_in', 'nav_list_animate_out');
         setOpened(false);

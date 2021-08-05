@@ -3,16 +3,11 @@ import React from 'react';
 import Project from '../components/Project';
 import '../styles/Portfolio.css';
 
+import Sorting from '../images/sorting.png';
+
 const Portfolio = () => {
 
-    const generateProjects = () => {
-        let options = [];
-        for(let i = 0; i < 4; i++) {
-            options.push(<Project id={i} key={i}/>)
-        }
-        return options;
-    }
-
+    //animate project loading
     const handlePortfolioScroll = () => {
         const portfolio_top = document.getElementById('portfolio').getBoundingClientRect().top + window.pageYOffset;
         const nav_height = document.getElementById('nav_list').getBoundingClientRect().height;
@@ -43,7 +38,13 @@ const Portfolio = () => {
             <div className='portfolio' id='portfolio'>
                 <h3 className='portfolio_title'>Previous works</h3>
                 <div className='portfolio_grid'>
-                    { generateProjects() }
+                    <Project
+                        id={0}
+                        key={0}
+                        title='Sorting algorithms'
+                        img={Sorting}
+                        url='https://tender-booth-f0f6bb.netlify.app/'
+                    />
                 </div>
             </div>
         </>
