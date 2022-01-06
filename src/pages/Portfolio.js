@@ -4,6 +4,7 @@ import Project from '../components/Project';
 import '../styles/Portfolio.css';
 
 import Sorting from '../images/sorting.png';
+import Dividends from '../images/dividends.png';
 
 const Portfolio = () => {
 
@@ -44,6 +45,13 @@ const Portfolio = () => {
                         title='Sorting algorithms'
                         img={Sorting}
                         url='https://tender-booth-f0f6bb.netlify.app/'
+                    />
+                    <Project
+                        id={1}
+                        key={1}
+                        title='Dividend checker'
+                        img={Dividends}
+                        url='https://wonderful-yalow-9a6209.netlify.app/'
                     />
                 </div>
             </div>
