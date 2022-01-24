@@ -1,0 +1,23 @@
+body {
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+
+.weather_app_container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.weather_app_container a,
+.weather_app_container a:active,
+.weather_app_container a:hover,
+.weather_app_container a:visited {
+    color: black
+}
+
+.weather_app_container img {
+    max-width: 100%;
+    margin: 2em 0;
+}

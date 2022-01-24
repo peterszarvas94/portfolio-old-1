@@ -5,6 +5,9 @@ import '../styles/Portfolio.css';
 
 import Sorting from '../images/sorting.png';
 import Dividends from '../images/dividends.png';
+import Weather from '../images/weather.png';
+import Pantlika from '../images/pantlika.png';
+import Hangos from '../images/hangos.png';
 
 const Portfolio = () => {
 
@@ -45,6 +48,7 @@ const Portfolio = () => {
                         title='Sorting algorithms'
                         img={Sorting}
                         url='https://tender-booth-f0f6bb.netlify.app/'
+                        color='black'
                     />
                     <Project
                         id={1}
@@ -52,6 +56,31 @@ const Portfolio = () => {
                         title='Dividend checker'
                         img={Dividends}
                         url='https://wonderful-yalow-9a6209.netlify.app/'
+                        color='black'
+                    />
+                    <Project
+                        id={2}
+                        key={2}
+                        title='Weather App'
+                        img={Weather}
+                        url='/pages/weather'
+                        color='white'
+                    />
+                    <Project
+                        id={3}
+                        key={3}
+                        title='Music band webpage'
+                        img={Pantlika}
+                        url='https://www.pantlikazenekar.hu'
+                        color='black'
+                    />
+                    <Project
+                        id={4}
+                        key={4}
+                        title='Singing studio webpage'
+                        img={Hangos}
+                        url='https://hangosstudio.hu'
+                        color='white'
                     />
                 </div>
             </div>

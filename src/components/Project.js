@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/Project.css';
 
 const Project = (props) => {
+
     return (
     
         <div
@@ -18,6 +19,7 @@ const Project = (props) => {
                 <div
                     className='project_element'
                     id={'project_' + props.id}
+                    style={{color: props.color}}
                 >
                 {props.title}
                 </div>
