@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 //eslint-disable-next-line
 import emailjs, { init } from 'emailjs-com';
-import { FiMail, FiPhone } from 'react-icons/fi';
+import { FiMail, FiPhone, FiGithub } from 'react-icons/fi';
 import { FaPaperPlane, FaLinkedin } from 'react-icons/fa';
 
 import '../styles/Contact.css';
@@ -188,7 +188,21 @@ const Contact = () => {
                                     <strong>LinkedIn:</strong>
                                     <div>
                                         <a href='https://www.linkedin.com/in/peterszarvas94' target='_blank' rel="noopener noreferrer">
-                                            linkedin.com/in/peterszarvas94
+                                            /peterszarvas94
+                                        </a>
+                                    </div>
+                                </span>
+                            </li>
+                            {/* Linkedin */}
+                            <li>
+                                <span>
+                                    <FiGithub />
+                                </span>
+                                <span>
+                                    <strong>GitHub:</strong>
+                                    <div>
+                                        <a href='https://github.com/peterszarvas94' target='_blank' rel="noopener noreferrer">
+                                            /peterszarvas94
                                         </a>
                                     </div>
                                 </span>
