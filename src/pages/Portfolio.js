@@ -2,7 +2,7 @@ import React from 'react';
 
 import Project from '../components/Project';
 import '../styles/Portfolio.css';
-
+import Agrar from '../images/agrar.png';
 import Sorting from '../images/sorting.png';
 import Dividends from '../images/dividends.png';
 import Weather from '../images/weather.png';
@@ -45,17 +45,17 @@ const Portfolio = () => {
                     <Project
                         id={0}
                         key={0}
-                        title='Sorting algorithms'
-                        img={Sorting}
-                        url='https://tender-booth-f0f6bb.netlify.app/'
+                        title='Land management app'
+                        img={Agrar}
+                        url='https://62c5ddd5204b84005da4f1e7--enchanting-llama-b01136.netlify.app/'
                         color='black'
                     />
                     <Project
                         id={1}
                         key={1}
-                        title='Dividend checker'
-                        img={Dividends}
-                        url='https://wonderful-yalow-9a6209.netlify.app/'
+                        title='Sorting algorithms'
+                        img={Sorting}
+                        url='https://tender-booth-f0f6bb.netlify.app/'
                         color='black'
                     />
                     <Project
@@ -77,6 +77,14 @@ const Portfolio = () => {
                     <Project
                         id={4}
                         key={4}
+                        title='Dividend checker'
+                        img={Dividends}
+                        url='https://wonderful-yalow-9a6209.netlify.app/'
+                        color='black'
+                    />
+                    <Project
+                        id={5}
+                        key={5}
                         title='Singing studio webpage'
                         img={Hangos}
                         url='https://hangosstudio.hu'
