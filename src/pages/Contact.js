@@ -68,10 +68,11 @@ const Contact = () => {
                 contact_email: toSend.contact_email,
                 contact_message: toSend.contact_message
             });
-            console.log(response);
+            alert('Your message has been sent');
+            // console.log(response);
 
         } catch(err) {
-            console.log(err);
+            // console.log(err);
         }
     }
 
