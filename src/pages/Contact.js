@@ -62,15 +62,13 @@ const Contact = () => {
         }
 
         try {
-            const response = await emailjs.send("service_tymk94v", "template_6od5ifg", {
+            await emailjs.send("service_tymk94v", "template_6od5ifg", {
                 contact_name: toSend.contact_name,
                 contact_subject: toSend.contact_subject,
                 contact_email: toSend.contact_email,
                 contact_message: toSend.contact_message
             });
             alert('Your message has been sent');
-            // console.log(response);
-
         } catch(err) {
             // console.log(err);
         }
