@@ -37,12 +37,27 @@
 
 .about_paragraph li {
     margin: 0;
-    padding: 0 0 .3em 0;
+    /* padding: 0 0 .3em 0; */
+    display: grid;
+    grid-template-columns: 2rem auto;
+    width: 10rem;
+    align-items: center;
+    justify-items: start;
+}
+
+.about_paragraph span {
+    /* width: 1rem; */
+    margin: 0;
 }
 
 .about_paragraph svg {
-    position: relative;
-    top: .15em;
+    display: block;
+    width: 1rem;
+    height: auto;
+    /* position: relative; */
+    /* display: inline-block; */
+    /* position: absolute; */
+    /* top: 0em; */
 }
 
 .few_line {

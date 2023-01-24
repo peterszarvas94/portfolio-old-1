@@ -2,6 +2,14 @@
     color: #61dafb;
 }
 
+.tsBlue {
+    color: #007acc;
+}
+
+.jsYellow {
+    color: #f7df1e;
+}
+
 .nodeGreen {
     color: #43853d;
 }
@@ -14,11 +22,19 @@
     color: #0faa50;
 }
 
-.wordpressBlue {
+.wpBlue {
     color: #21759b;
 }
 
-.javaYellow {
+.gqlPurple {
+    color: #e10098;
+}
+
+.psBlue {
+    color: #0098d7;
+}
+
+.javaOrange {
     color: #f29111;
 }
 
@@ -27,5 +43,5 @@
 }
 
 .cssBlue {
-    color: #264de4;
+    color: #1a73ba;
 }

@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 
 import Home from './pages/Home';
-import WeatherApp from './pages/weather/WeatherApp';
 
 function App() {
 	return (
@@ -16,9 +15,6 @@ function App() {
 			<Switch>
 				<Route path='/' exact>
 					<Home />
-				</Route>
-				<Route path='/pages/weather' exact>
-					<WeatherApp />
 				</Route>
 				<Redirect to='/' />
 			</Switch>

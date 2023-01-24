@@ -23,7 +23,7 @@ const HeaderTitle = () => {
             <h1 className='title_animate_2'>
                 <strong>Péter Szarvas,</strong>
             </h1>
-            <h2 className='title_animate_3'>junior web developer</h2>
+            <h2 className='title_animate_3'>web developer</h2>
             
         </div>
     )
