@@ -1,3 +1,3 @@
-# peterszarvas_frontend
+# portfolio old 1
 
-This is the old personal portfolio site for [Szarvas Péter](https://github.com/peterszarvas94/).
+archived, next is [portfolio old 2](https://github.com/peterszarvas94/portfolio-old-2)
